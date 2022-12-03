@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start:dev:all": "ENV=local nx run-many --target=serve",
+    "start:dev": "ENV=local nx serve",
     "start": "nx serve",
+    "start:all": "nx run-many --target=serve",
     "build": "nx build",
     "test": "nx test"
   },
@@ -11,7 +14,9 @@
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/mapped-types": "^1.2.0",
     "@nestjs/platform-express": "^9.0.0",
+    "http-proxy-middleware": "^2.0.6",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0"
